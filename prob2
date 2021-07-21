@@ -1,0 +1,13 @@
+import re
+
+def printMatch(name):
+    pat = re.compile(r'\b[A-Z][a-zA-Z]+\sNakamoto')
+    if pat.search(name):
+        print (name + ' matches')
+    else:
+        print (name + ' does not match')
+
+printMatch('test satoshi Nakamoto test')
+printMatch('test Satoshi Nakamoto test')
+printMatch('test RoboCop Nakamoto test')
+printMatch('test roboCop Nakamoto test')
