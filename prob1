@@ -1,0 +1,7 @@
+import re
+ 
+numRegex = re.compile(r"((?<!\d)\d{1,3}(?!\d)(,\d{3})*)")
+txt = "  ababs123,223,441,112    1234  121,311     12,34,567   12341  1,213 "
+xs = numRegex.findall(txt)
+for x in xs:
+    print(x[0])
